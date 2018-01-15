@@ -81,7 +81,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7R2-Ph-7SL">
                                 <rect key="frame" x="142" y="87" width="382.5" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIU-IR-g0G">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIU-IR-g0G">
                                         <rect key="frame" x="0.0" y="0.0" width="9" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -165,9 +165,12 @@
                     </view>
                     <connections>
                         <outlet property="answer" destination="YFe-5D-mR4" id="ngR-7N-qyf"/>
+                        <outlet property="levelLabel" destination="3DU-HR-9N4" id="Fgw-HX-1Tj"/>
                         <outlet property="operandFirst" destination="rIU-IR-g0G" id="cSf-Ie-1ef"/>
                         <outlet property="operandSecond" destination="TGb-xj-SDT" id="ds6-Fh-rRz"/>
                         <outlet property="operator" destination="TxO-S2-Bxv" id="kAT-tz-ppe"/>
+                        <outlet property="roundLabel" destination="zVa-P3-ban" id="RSm-kB-bcP"/>
+                        <outlet property="scoreLabel" destination="jw0-I8-IVu" id="OK1-Nl-cP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
