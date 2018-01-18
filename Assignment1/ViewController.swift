@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var score = 0
     var round = 0
     var randNum = 0
-    
+    var expected = 0
     
     @IBOutlet weak var operandFirst: UILabel!
     @IBOutlet weak var Operator: UILabel!
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     func generateRandomOperands() {
-        round += 1
+        
         var firstRand : Int
         var secondRand : Int
         randNum = Int(arc4random_uniform(4))
@@ -75,49 +75,49 @@ class ViewController: UIViewController {
     
 
     @IBAction func ResetButton(_ sender: UIButton) {
-        score = 0
-        round = 0
+        
         
     }
-    func checkforans(){
-        var expected = 0
+    func actualAnswer() {
         
         switch (randNum) {
         case 0: expected = a + b
-       
+        
             break
         case 1: expected = a - b
-       
+        
             break
         case 2: expected = a * b
-       
+        
             break
         case 3: expected = a / b
-       
+        
             break
         default:
             break
         }
-        
+    }
+   
+    func checkans() {
         let answer2: Int? = Int(answer.text!)
         if answer2 == expected {
             let alert = UIAlertController(title:"You got it!", message:"you won 3 times in this level", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler:nil)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addAction(action)
-            alert.addAction(cancelAction)
             
+            alert.addAction(action)
             present(alert, animated: true, completion: nil)
+            
         }
-        
     }
     
     @IBAction func CheckButton(_ sender: UIButton) {
         generateRandomOperands()
-        checkforans()
-    }
+        actualAnswer()
+        checkans()
+        
     
+}
 }
 
 
